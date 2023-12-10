@@ -12,6 +12,18 @@ services:
       - gabrielNet
     depends_on:
       - postgres_api
+  
+  nginx:
+    restart: always
+    build: 
+      dockerfile: ./nginx.dockerfile
+      context: .
+    ports:
+      - "80:80"
+    depends_on:
+      - api
+    networks:
+      - gabrielNet
 
   postgres_api:
     image: postgres
