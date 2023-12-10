@@ -5,7 +5,7 @@
   "main": "./src/server.js",
   "scripts": {
     "migrate": "npx knex migrate:latest",
-    "seed":"npx knex seed:rum",
+    "seed":"npx knex seed:run",
     "dev":"npx nodemon start"
   },
   "keywords": [],
