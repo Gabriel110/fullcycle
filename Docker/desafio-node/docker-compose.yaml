@@ -20,7 +20,7 @@ services:
       dockerfile: ./nginx.dockerfile
       context: .
     ports:
-      - "80:80"
+      - "8080:8080"
     depends_on:
       - api
     networks:
