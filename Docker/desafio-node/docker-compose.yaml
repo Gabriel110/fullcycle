@@ -6,12 +6,15 @@ services:
       context: .
     container_name: api_node
     image: api_node
+    volumes:
+      - ./:/usr/src/app
     ports:
       - "3000:3000"
     networks:
       - gabrielNet
     depends_on:
-      - postgres_api
+      postgres_api:
+        condition: service_healthy
   
   nginx:
     restart: always
@@ -33,12 +36,22 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
       POSTGRES_DB: user
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d user"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    volumes:
+      - pgdata:/var/lib/postgresql/data
     ports:
       - "5432:5432"
     networks:
       - gabrielNet
-   
+       
 networks:
   gabrielNet:
     driver: bridge
+
+volumes:
+  pgdata:
     
