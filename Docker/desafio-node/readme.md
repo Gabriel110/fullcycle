@@ -26,4 +26,3 @@ Ao roda a aolicação serão cadastrados 3 usuarios:
  - Gabriel
  - Maria
  - Melissa
- 
