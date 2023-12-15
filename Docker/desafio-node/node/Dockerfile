@@ -1,6 +1,6 @@
 FROM node:latest as NodeMenor
-COPY . /var/www
-WORKDIR /var/www
+WORKDIR /api
+COPY . .
 RUN npm install
 ENTRYPOINT npm run migrate \
             && npm run seed \

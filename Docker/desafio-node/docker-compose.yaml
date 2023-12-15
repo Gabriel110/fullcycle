@@ -2,12 +2,11 @@ version: '3'
 services:
   api:
     build: 
-      dockerfile: ./api.dockerfile
-      context: .
+      context: node
     container_name: api_node
     image: api_node
     volumes:
-      - ./:/usr/src/app
+      - ./node:/api
     ports:
       - "3000:3000"
     networks:
@@ -21,7 +20,7 @@ services:
     container_name: nginx
     build: 
       dockerfile: ./nginx.dockerfile
-      context: .
+      context: nginx
     ports:
       - "8080:8080"
     depends_on:
