@@ -16,4 +16,3 @@ services:
     container_name: consulserver03
     hostname: consulserver03
     command: ['tail','-f','/dev/null']
-  
