@@ -1,3 +1,5 @@
 spring:
   application:
     name: ddd
+server:
+  port: 9000

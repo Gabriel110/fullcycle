@@ -1,4 +1,4 @@
-package br.com.gabriel.ddd.demo
+package br.com.gabriel.ddd
 
 import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest

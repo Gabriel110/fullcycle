@@ -1,4 +1,4 @@
-package br.com.gabriel.ddd.demo
+package br.com.gabriel.ddd
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
