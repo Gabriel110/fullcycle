@@ -58,4 +58,5 @@ A adoção de containers transformou a forma como as aplicações são desenvolv
 - [Documentação Oficial do Docker](https://docs.docker.com/)
 - [Open Container Initiative](https://opencontainers.org/)
 - [Comparação entre Containers e Máquinas Virtuais](https://www.docker.com/resources/what-container/)
+  
 ![dockerVsVms](./img/docekrvsvms.png)
